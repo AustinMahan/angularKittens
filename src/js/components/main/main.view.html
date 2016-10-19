@@ -1,0 +1,9 @@
+<h1>All Kittens</h1>
+<table class="table">
+  <tr>
+    <th>Name</th><th>Bio</th><th>Image</th><th>Likes</th>
+  </tr>
+  <tr ng-repeat="cat in mainCtrl.cats track by $index">
+    <td>{{cat.name}}</td><td>{{cat.bio}}</td><td><img src="{{cat.img}}" alt="" /></td><td ng-click="mainCtrl.add($index)">{{cat.likes}}</td>
+  </tr>
+</table>
